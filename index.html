@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Pia Microprocesadores</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="city">
+        <img src="city.jpg" alt="city"> 
+        <div class="highway">
+            <img src="road.jpg" alt="road">
+        </div>
+        <div class="car">
+            <img src="car.png" alt="car">
+        </div>
+        <div class="trafficlight">
+            <img src="trafficlight.png" alt="trafficlight">
+        </div>
+        
+    </div>
+
+    
+    <div id=:"sample"></div> 
+
+    <script>
+    var socket = io();
+    socket.on('data', function(data){
+        console.log('data');
+        document.getElementById('sample').innerHTML = data ; //aqui se muestra la info del arduino en el html
+    })
+    </script>
+
+    
+</body>
+</html>

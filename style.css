@@ -1,0 +1,59 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.city{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.highway{
+     height: 200px;
+     width: 500%;
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     z-index: 1;
+     background-repeat: repeat-x;
+     animation:  highway 20s linear infinite;
+}
+
+@keyframes highway{
+    100%{
+        transform: translateX(-3400px);
+    }
+}
+
+.car{
+    width: 500px;
+    left: 25%;
+    bottom: -60px;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 2;
+}
+
+.car img{
+    width: 100%;
+}
+
+.trafficlight{
+    width: 600px;
+    left: 75%;
+    bottom: -20px;
+    position: absolute;
+    z-index: 2;
+}
+
+.trafficlight img{
+    width: 100%;
+}
+
+
